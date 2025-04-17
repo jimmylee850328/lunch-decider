@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 午餐決定器
 
-## Getting Started
+一個簡單的 Next.js 應用程式，幫助你決定午餐吃什麼。
 
-First, run the development server:
+## 本地開發
 
 ```bash
+# 安裝依賴
+npm install
+
+# 啟動開發伺服器
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+然後在瀏覽器中打開 [http://localhost:3000](http://localhost:3000) 查看結果。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 使用 Docker 構建和運行
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 構建 Docker 映像檔
 
-## Learn More
+```bash
+docker build -t lunch-decider .
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 運行 Docker 容器
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker run -p 3000:3000 lunch-decider
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+然後在瀏覽器中打開 [http://localhost:3000](http://localhost:3000) 即可訪問應用程式。
